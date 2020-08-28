@@ -8,7 +8,7 @@ import { PaymentCreatedListener } from './events/listeners/payment-created-liste
 
 // A start script is made because some versions of node do not support await syntax on the top level
 const start = async () => {
-  console.log('Starting up!');
+  console.log('Starting up...');
 
   // Check the existence of environment variables
   if (!process.env.JWT_KEY) throw new Error('JWT_KEY must be defined');
