@@ -8,6 +8,8 @@ import { PaymentCreatedListener } from './events/listeners/payment-created-liste
 
 // A start script is made because some versions of node do not support await syntax on the top level
 const start = async () => {
+  console.log('Starting...');
+
   // Check the existence of environment variables
   if (!process.env.JWT_KEY) throw new Error('JWT_KEY must be defined');
   if (!process.env.MONGO_URI) throw new Error('MONGO_URI must be defined');
