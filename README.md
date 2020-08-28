@@ -1,26 +1,25 @@
 # Ticketing App
 
-## Instructions
-
-- Requests must be made over HTTPS
-
 ## Environment variables
 
 ```bash
 # JWT_KEY
-kubectl create secret generic jwt-secret --from-literal JWT_KEY=asdf
+kubectl create secret generic jwt-secret --from-literal JWT_KEY=any-secret
 
 # STRIPE_KEY
 kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=stripe-key
+
+# GitHub Secrets
+- DOCKER_USERNAME
+- DOCKER_PASSWORD
 ```
 
-## Expose the ingress service
+## Ingress Nginx
 
 ```bash
-# Expose the ingress service
+# Localhost
 kubectl expose deployment ingress-nginx-controller --target-port=80 --type=ClusterIP -n kube-system
+
+# Digital Ocean
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.1/deploy/static/provider/baremetal/deploy.yaml
 ```
-
-## Dockerhub images
-
-- Make sure all the images are hosted at DockerHub
