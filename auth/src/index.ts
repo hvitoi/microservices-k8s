@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { app } from './app';
 
-// A start script is made because some versions of node do not support await syntax on the top level
+// A start script is made because some versions of node do not support 'await' syntax on top level
 const start = async () => {
   // Check the existence of environment variables
   if (!process.env.JWT_KEY) throw new Error('JWT_KEY must be defined');
