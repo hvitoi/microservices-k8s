@@ -19,7 +19,7 @@ let mongo: any;
 
 beforeAll(async () => {
   // Increase the timeout to be able to download the binaries of mongo
-  jest.setTimeout(5000);
+  jest.setTimeout(10000);
 
   // Setup the environment variables
   process.env.JWT_KEY = 'asdf';
