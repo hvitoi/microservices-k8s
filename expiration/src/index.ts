@@ -24,7 +24,7 @@ const start = async () => {
 
     process.on('SIGINT', () => natsWrapper.client.close()); // Watch for interrupt signals
     process.on('SIGTERM', () => natsWrapper.client.close()); // Watch for terminate signals
-    process.on('SIGUSR2', () => natsWrapper.client.close()); // Nodemon kill signal
+    process.on('SIGUSR2', () => natsWrapper.client.close()); // Watch for nodemon kill signal
 
     // Listen to events
     new OrderCreatedListener(natsWrapper.client).listen();
