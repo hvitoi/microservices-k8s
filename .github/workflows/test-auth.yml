@@ -3,7 +3,7 @@ name: test-auth
 on:
   pull_request:
     paths:
-      - 'auth/**' # Only on changes to auth
+      - 'auth/**'
 
 jobs:
   build:
