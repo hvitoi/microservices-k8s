@@ -18,8 +18,9 @@ app.use(express.json()); // bodyParser middleware
 app.use(
   cookieSession({
     signed: false, // Disable encryption
-    secure: process.env.NODE_ENV !== 'test' // true if on 'start', false if on 'test'
+    //secure: process.env.NODE_ENV !== 'test' // true if on 'start', false if on 'test'
     // Cookie only will be used over https if true
+    secure: false
   })
 );
 
