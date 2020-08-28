@@ -9,7 +9,7 @@ metadata:
 
 spec:
   rules:
-    - host: ticketing.dev # The information about the domain can only be passed by the browser. For communication between services it doesn't work!
+    - host: ticketing.dev
       http:
         paths:
           - path: /api/users/?(.*)
