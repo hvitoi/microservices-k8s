@@ -36,7 +36,7 @@ const LandingPage = ({ currentUser, tickets }) => {
 LandingPage.getInitialProps = async (context, client, currentUser) => {
   const { data } = await client.get('/api/tickets');
 
-  return { tickets: data }; // tickets will be a props for LandingPage
+  return { tickets: data }; // tickets will be provided as props for LandingPage
 };
 
 export default LandingPage;

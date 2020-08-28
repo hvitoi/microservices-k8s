@@ -4,7 +4,7 @@ import { app } from './app';
 import { OrderCancelledListener } from './events/listeners/order-cancelled-listener';
 import { OrderCreatedListener } from './events/listeners/order-created-listener';
 
-// A start script is made because some versions of node do not support await syntax on the top level
+// A start script is made because some versions of node do not support 'await' syntax on the top level
 const start = async () => {
   // Check the existence of environment variables
   if (!process.env.JWT_KEY) throw new Error('JWT_KEY must be defined');
