@@ -6,7 +6,7 @@ import { TicketUpdatedListener } from './events/listeners/ticket-updated-listene
 import { ExpirationCompleteListener } from './events/listeners/expiration-complete-listener';
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 
-// A start script is made because some versions of node do not support await syntax on the top level
+// A start script is made because some versions of node do not support 'await' syntax on the top level
 const start = async () => {
   // Check the existence of environment variables
   if (!process.env.JWT_KEY) throw new Error('JWT_KEY must be defined');
